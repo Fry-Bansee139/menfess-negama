@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Negama Menfess</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff007d 0%, #ff6a00 100%);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 400px;
+      margin: 2rem auto;
+    }
+
+    .profile {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #ffffff;
+      box-shadow: 0 0 15px #ffffff;
+    }
+
+    .profile h2 {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+    }
+
+    .profile p {
+      color: #ffeaea;
+    }
+
+    .bubble-button {
+      background: white;
+      color: #ff007d;
+      border: none;
+      padding: 1rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 1rem;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+    }
+
+    .bubble-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+
+    .skill-card {
+      background: white;
+      color: #ff007d;
+      border-radius: 50px;
+      padding: 1rem;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    .skill-card i {
+      font-size: 1.5rem;
+      color: #ff007d;
+    }
+
+    .skill-card h4 {
+      font-size: 1.2rem;
+      margin-left: 10px;
+      flex-grow: 1;
+      text-align: left;
+      color: #ff007d;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* Popup Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background: white;
+      color: #333;
+      padding: 2rem;
+      margin: 10% auto;
+      border-radius: 15px;
+      max-width: 90%;
+      width: 350px;
+      position: relative;
+      text-align: center;
+    }
+
+    .modal-content i {
+      font-size: 2.5rem;
+      color: orange;
+      margin-bottom: 1rem;
+    }
+
+    .modal-content h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .modal-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .modal-buttons button {
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-ok {
+      background-color: #6a4de2;
+      color: #fff;
+    }
+
+    .btn-cancel {
+      background-color: #616a75;
+      color: #fff;
+    }
+
+    .modal-close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 1.2rem;
+      color: #666;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <img src="https://raw.githubusercontent.com/Fry-Bansee139/menfess-negama/refs/heads/main/IMG_20250505_071710.jpg" alt="Profile Picture">
+      <h2>Negama Menfess</h2>
+      <p>Klik dibawah untuk menfess</p>
+      <button class="bubble-button" onclick="openModal()">
+        <i class="fab fa-weixin"></i>
+        Negama Menfess
+      </button>
+    </div>
+
+    <div class="skills">
+      <a href="https://whatsapp.com/channel/0029VavlFsB7Noa48Yxp1F26" class="skill-card">
+        <i class="fab fa-whatsapp"></i>
+        <h4>Saluran Menfess WhatsApp</h4>
+      </a>
+      <a href="https://www.instagram.com/negama.menfess" class="skill-card">
+        <i class="fab fa-instagram"></i>
+        <h4>Instagram</h4>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>All Rights Reserved.</p>
+    <p>Creator: <a href="https://instagram.com/zdybladeits" target="_blank">@zdybladeits</a></p>
+  </footer>
+
+  <!-- Modal Popup -->
+  <div id="popupModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <i class="fas fa-exclamation-circle"></i>
+      <h2>Warning</h2>
+      <p>Dilarang spam, sara, rasis, 18+, etc</p>
+      <p>Kirim menfess seperti ini, contoh</p>
+      <p>mf: min mending pilih surga atau neraka?</p>
+      <div class="modal-buttons">
+        <button class="btn-ok" onclick="window.location.href='https://ngl.link/negama.menfess'">Mengerti</button>
+        <button class="btn-cancel" onclick="closeModal()">Tidak sekarang</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('popupModal').style.display = 'block';
+    }
+    function closeModal() {
+      document.getElementById('popupModal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

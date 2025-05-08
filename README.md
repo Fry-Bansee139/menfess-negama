@@ -1,1 +1,1 @@
-About MTS NEGAMA
+Negama menfess Godamn

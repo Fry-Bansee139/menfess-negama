@@ -1,1 +1,1 @@
-Negama menfess Godamn
+don't take it

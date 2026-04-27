@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Login - WA Reaction</title>
+    <meta name="description" content="Login with your VIP key">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>WA Reaction <span class="vip-badge">VIP</span></h1>
+            <p>Login dengan VIP Key</p>
+        </div>
+
+        <div id="alert" class="alert"></div>
+
+        <div class="card">
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="vipKey">VIP Key</label>
+                    <input type="text" id="vipKey" class="form-input" placeholder="VIP-XXXX-XXXX-XXXX-XXXX" required>
+                    <div class="hint">Masukkan VIP Key yang sudah kamu beli. <span
+                            style="color: #ef4444; display: block; margin-top: 4px;">⚠️ Maksimal 3x percobaan gagal atau
+                            IP akan diblokir 24 jam.</span></div>
+                </div>
+
+                <div class="g-recaptcha" data-sitekey="6LdzXJosAAAAAKP3UCfk_TFJaBBTt6vi2vi22WS2" style="margin-bottom: 1rem; display: flex; justify-content: center;"></div>
+
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+                    <span id="btnText">Login</span>
+                    <div class="spinner" id="btnSpinner" style="display: none;"></div>
+                </button>
+            </form>
+        </div>
+
+        <div class="btn-group">
+            <a href="/" class="btn btn-secondary">← Back</a>
+            <a href="free" class="btn btn-secondary">Free Mode</a>
+        </div>
+
+        <div style="text-align: center; margin-top: 24px;">
+            <p style="font-size: 0.75rem; color: var(--text-muted);">
+                Belum punya VIP Key? <a href="https://yogaxd-topup.zone.id/topup" target="_blank"
+                    style="color: #f59e0b; font-weight: 600;">Beli Sekarang</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let csrfToken = null;
+        let csrfChallenge = null;
+
+        // Check if already logged in
+        const savedKey = localStorage.getItem('vipKey');
+        if (savedKey) {
+            window.location.href = 'vip';
+        }
+
+        // Fetch CSRF token on page load
+        async function fetchCsrfToken() {
+            try {
+                const response = await fetch('/api/get-token', {
+                    headers: { 'X-Requested-With': 'XMLHttpRequest' }
+                });
+                const data = await response.json();
+                if (data.success) {
+                    csrfToken = data.token;
+                    csrfChallenge = data.challenge;
+                }
+            } catch (error) {
+                console.error('Error fetching CSRF token:', error);
+            }
+        }
+
+        fetchCsrfToken();
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const vipKey = document.getElementById('vipKey').value.trim();
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const btnSpinner = document.getElementById('btnSpinner');
+
+            if (!vipKey) {
+                showAlert('Please enter your VIP Key', 'error');
+                return;
+            }
+
+            const recaptchaResponse = typeof grecaptcha !== 'undefined' ? grecaptcha.getResponse() : '';
+            if (!recaptchaResponse) {
+                showAlert('Selesaikan verifikasi recaptcha (I\'m not robot) terlebih dahulu', 'error');
+                return;
+            }
+
+            submitBtn.disabled = true;
+            btnText.textContent = 'Validating...';
+            btnSpinner.style.display = 'block';
+
+            let challengeAnswer = '';
+            try {
+                if (csrfChallenge) {
+                    challengeAnswer = Function('"use strict";return (' + csrfChallenge + ')')();
+                }
+            } catch (e) {
+                console.error('Failed to solve challenge');
+            }
+
+            try {
+                const response = await fetch('/api/vip-validate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-Token': csrfToken || '',
+                        'X-Challenge-Answer': challengeAnswer.toString()
+                    },
+                    body: JSON.stringify({ vipKey, recaptcha_response: recaptchaResponse })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    localStorage.setItem('vipKey', vipKey);
+                    localStorage.setItem('vipName', data.data.name);
+                    showAlert('✅ Login successful! Redirecting...', 'success');
+                    setTimeout(() => {
+                        window.location.href = 'vip';
+                    }, 1000);
+                } else {
+                    showAlert('❌ ' + (data.error || 'Invalid VIP Key'), 'error');
+                }
+            } catch (error) {
+                showAlert('❌ Network error. Please try again.', 'error');
+            } finally {
+                if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+                submitBtn.disabled = false;
+                btnText.textContent = 'Login';
+                btnSpinner.style.display = 'none';
+            }
+        });
+
+        function showAlert(message, type) {
+            const alertEl = document.getElementById('alert');
+            alertEl.textContent = message;
+            alertEl.className = 'alert alert-' + type + ' show';
+            setTimeout(() => alertEl.classList.remove('show'), 5000);
+        }
+    </script>
+</body>
+
+</html>

@@ -3,7 +3,7 @@ const app = express();
 const PORT = Math.floor(Math.random() * (9999 - 3000 + 1)) + 3000;
 const path = require('path');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname)));
 // Untuk parsing query string (biar bisa baca ?file=...)
 app.use(express.urlencoded({ extended: true }));
 
@@ -18,7 +18,7 @@ const allowedBucinFiles = ['1.html', '2.html', '3.html', '4.html'];
 app.get('/', (req, res) => {
     if (homePageFile) {
         // Kirim file bucin yang sudah dipilih
-        res.sendFile(path.join(__dirname, 'public', homePageFile));
+        res.sendFile(path.join(__dirname, homePageFile));
     } else {
         // Halaman default jika belum ada yang disetel
         res.send(`
@@ -583,19 +583,19 @@ app.get('/admin-panel', (req, res) => {
 
 // ====== ROUTE UNTUK TEMPLATE BUCIN ======
 app.get("/1", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', '1.html'));
+    res.sendFile(path.join(__dirname, '1.html'));
 });
 app.get("/2", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', '2.html'));
+    res.sendFile(path.join(__dirname, '2.html'));
 });
 app.get("/3", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', '3.html'));
+    res.sendFile(path.join(__dirname, '3.html'));
 });
 app.get("/4", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', '4.html'));
+    res.sendFile(path.join(__dirname, '4.html'));
 });
 app.get("/tikstalk", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'tikstalk.html'));
+    res.sendFile(path.join(__dirname, 'tikstalk.html'));
 });
 
 // Error handling

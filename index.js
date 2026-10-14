@@ -411,7 +411,7 @@ app.get('/admin-panel', (req, res) => {
                     services: {
                         "tp1": { name: "Template 1 — Halo Sayang", url: "/1" },
                         "tp2": { name: "Template 2 — Tema Cinta", url: "/2" },
-                        "tp3": { name: "Template 3 — Paksa Sayang", url: "/3" }
+                        "tp3": { name: "Template 3 — Paksa Sayang", url: "/3" },
                         "tp4": { name: "Template 4 — Cinta Banget", url: "/4" }
                     }
                 },

